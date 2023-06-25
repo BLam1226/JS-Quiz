@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <title>Code Quiz</title>
+  <link rel="stylesheet" href="./assets/css/styles.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+</head>
+
+<body>
+  <nav>
+    <button id="nav-scores">High Scores</button>
+  </nav>
+
+  <!-- Intro Message -->
+  <section id="intro">
+    <h1>Coding Quiz Challenge</h1>
+    <p>Try to answer questions on JavaScript fundamentals in a timely manner and then save your score along with your initials.</p>
+    <button id="start-button">Start Quiz!</button>
+  </section>
+
+  <!-- Question Box -->
+  <section id="question" class="hide">
+    <div class="grid">
+      <!-- Timer display -->
+      <h3 id="timer">Timer: 60</h3>
+      <!-- Question # updated as answers are populated -->
+      <h2>Question #</h2>
+    </div>
+    <p>Question text</p>
+    <!-- Answers appended into existing list items as spans -->
+    <ul>
+      <li>1. <span></span></li>
+      <li>2. <span></span></li>
+      <li>3. <span></span></li>
+      <li>4. <span></span></li>
+    </ul>
+    <h3 id="correct"><em></em></h3>
+  </section>
+
+  <!-- Times up screen -->
+  <section id="times-up" class="hide">
+    <h2>Time's up!</h2>
+  </section>
+
+  <!-- Finishing screen -->
+  <section id="finish" class="hide">
+    <h2>Finished!</h2>
+    <p>Your final score:</p>
+    <!-- Empty list to display score stats such as correct/wrong/time -->
+    <uL>
+
+    </uL>
+    <p>Enter your initials and save your score.</p>
+    <form>
+      <label for="initials">Your Initials</label>
+      <input type="text" minlength="2" maxlength="3" name="initials" required>
+      <button type="submit">Save Score</button>
+    </form>
+  </section>
+
+  <!-- Score screen -->
+  <section id="scores" class="hide">
+    <h2>
+      High Scores
+    </h2>
+    <!-- List display scores saved in localStorage -->
+    <ul>
+
+    </ul>
+    <div class="grid">
+      <button id="play-again">Go Back</button>
+      <button id="clear-scores">Clear High Scores</button>
+    </div>
+  </section>
+
+  <script src="./assets/js/script.js"></script>
+</body>
+
+</html>
